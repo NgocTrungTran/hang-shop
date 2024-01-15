@@ -1,0 +1,51 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "12",
+    "password": "1234",
+    "confirmPassword": "123"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "milotran1496",
+    "password": "1234321"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk4MGQ0ZWViMzEyM2VkMzAyN2VjNmYiLCJpYXQiOjE3MDUwNDk2MTR9.yo3kVHxoTnHYOETJF3ASziQkKYCq07r3uvViA5xznNI
+
+{
+    "title": "Hang's post",
+    "description": "Hang's shop website",
+    "url": "youtube.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk4MGQ0ZWViMzEyM2VkMzAyN2VjNmYiLCJpYXQiOjE3MDQ2MTYxNTZ9.2pjVk8WOfYTUkIkBiIutxsLswIRab9a_vJ9JGq2H5C0
+
+
+###
+PUT http://localhost:5000/api/posts/6598cf731c02896c18fe2ba7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk4MGQ0ZWViMzEyM2VkMzAyN2VjNmYiLCJpYXQiOjE3MDQ2MTYxNTZ9.2pjVk8WOfYTUkIkBiIutxsLswIRab9a_vJ9JGq2H5C0
+
+{
+    "title": "milo's update post",
+    "description": "",
+    "url": "youtube.com",
+    "status": "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/6598cf731c02896c18fe2ba7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk4MGQ0ZWViMzEyM2VkMzAyN2VjNmYiLCJpYXQiOjE3MDQ2MTYxNTZ9.2pjVk8WOfYTUkIkBiIutxsLswIRab9a_vJ9JGq2H5C0
